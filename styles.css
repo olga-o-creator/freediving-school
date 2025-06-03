@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #00c6ff, #0072ff);
@@ -20,73 +20,71 @@ header h1 {
 }
 
 header p {
-    font-size: 1.5em;
-    color: #00c6ff;
+    font-size: 1.2em;
+    color: #333;
 }
 
 section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2em;
-    color: #0072ff;
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    gap: 20px;
 }
 
 .gallery img {
-    width: 100%;
-    max-width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
 }
 
-.contact {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.contact p {
-    margin: 10px 0;
-}
-
-button {
-    background-color: #0072ff;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-
 @media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
+    .gallery img {
+        width: 100%;
     }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gallery img {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .gallery img {
+        width: 30%;
+    }
+}
+
+h2 {
+    color: #0072ff;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+    color: #333;
 }
